@@ -29,12 +29,38 @@ After this I read through the code to figure out how it worked, then I created a
 <img src="Documentation/forked_bg_working.png" alt="Notes" width="300">
 
 My new bg class object ^
-I wrote my bg class to be adaptable to and window size, so I used the windowWidth and windowHeight of the canvas as references for the x and y points and limits for circle generation, rather than the set points in Siennas original sketch, as that had a set canvas size.
+I wrote my bg class to be adaptable to and window size, so I used the windowWidth and windowHeight of the canvas as references for the x and y points and limits for circle generation, rather than the set points in Siennas original sketch which had a set canvas size.
 
-(Add sc)
+## Walker Function
+I began writing my walker function using Leo's example as a heavy reference.
+My first iteration of the walkers had a random size generator for the size of the walker, however I decide to get rid of this because it didn't look very good.
 
+<img src="Documentation/first_result.png" alt="Notes" width="300">
 
+As you can see in the picture above, the result was pretty interesting.
+I had a look at a smaller size (below) and it was closer to how I wanted the end result to be, so I changed the default size of the walkers to be 1/100th of the canvas width.
 
+<img src="Documentation/circle_resize_10.png" alt="Notes" width="300">
+
+After that I also edited my walker class to have one randomly generated colour per instance of class object rather than generate a new colour each frame.
+In the image below I have shown how my random rgb value generation used to be within the show() function of the walker rather than the constructor.
+
+<img width="434" alt="walker _class" src="https://github.com/user-attachments/assets/6bbc1c48-d44c-44d8-8900-6f626bc8a2a5" />
+
+At this point my walkers were appearing and moving as I wanted them to (below)
+
+<img src="Documentation/one_color_vis.png" alt="Notes" width="300">
+
+## Stopping Walkers
+For my added functionality I decided to give the user the ability to stop the walkers, I did this by writing a mousePressed() function where upon clicking the screen a walker would be deleted from the walkers array, this would stop the walker from moving any further but leave the previous 'footsteps' behind. 
+
+<img src="Documentation/killing_walker.png" alt="Notes" width="300">
+
+I also added a text that would appear on screen each time the user 'kills' a walker.
+
+<img src="Documentation/dead_walker_demo.png" alt="Notes" width="300">
+
+Above is a an example of what the website looks like.
 
 
 
