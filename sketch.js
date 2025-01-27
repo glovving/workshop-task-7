@@ -87,9 +87,10 @@ function mousePressed(){
   //walkers are removed from array when mouse is pressed
   if(walkers.length > 0){
     walkers.splice(walkers.length-1, 1);
-  }
-  //each time a walker 'dies' =, 'walker down' text is shown.
+     //each time a walker 'dies' =, 'walker down' text is shown.
   textSize(windowWidth/40);
   fill('black');
   text('walker down!', random(0, windowWidth - windowWidth/6), random(0, windowHeight - windowHeight/6))
+  }
+ 
 }
